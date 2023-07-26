@@ -50,42 +50,9 @@ const findMostFrequentElement = (arr) =>  {
 // const array =  [3, 5, 2, 5, 3, 3, 1, 4, 5];
 // console.log(findMostFrequentElement(array)); 
 
-
-//Task 4: Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
-
-const  findTwoNumbersWithSum = (arr, target) =>  {
-    let left = 0;
-    let right = arr.length - 1;
-  
-    while (left < right) {
-      const sum = arr[left] + arr[right];
-  
-      if (sum === target) {
-        return [left, right];
-      } else if (sum < target) {
-        left++;
-      } else {
-        right--;
-      }
-    }
-  
-  }
-  
-//   const sortedArray = [1, 3, 6, 8, 11, 15];
-//   const targetValue = 9;
-//   const result = findTwoNumbersWithSum(sortedArray, targetValue);
-//   console.log(result); // Output: [1, 2]
-  
-
-
-
 // // Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
 
 const  SimpleCalculator = (num1, operator, num2) =>  {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-      throw new Error("Both inputs should be numbers.");
-    }
-  
     if (operator === '+') {
       return num1 + num2;
     } else if (operator === '-') {
@@ -93,20 +60,16 @@ const  SimpleCalculator = (num1, operator, num2) =>  {
     } else if (operator === '*') {
       return num1 * num2;
     } else if (operator === '/') {
-      if (num2 === 0) {
-        throw new Error("Cannot divide by zero.");
-      }
       return num1 / num2;
-    } else {
-      throw new Error("Invalid operator. Please use +, -, *, or /.");
     }
+     
   }
   
   const num1 = 5;
-  const num2 = 3;
-  const operator = '*';
-//   const result = calculator(num1, operator, num2);
-//   console.log(result); 
+  const num2= 3;
+  const operator = '+';
+  const result = SimpleCalculator(num1, operator, num2);
+  // console.log(result); 
   
 // //   Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
 
@@ -165,10 +128,6 @@ const  ConvertRomanNumeralToInteger = (romanNumeral) => {
 // // Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
 
 const findSecondSmallest = (arr) => {
-//   if (arr.length < 2) {
-//     throw new Error("The array should have at least two elements.");
-//   }
-
   let smallest = Infinity;
   let secondSmallest = Infinity;
 
@@ -180,13 +139,8 @@ const findSecondSmallest = (arr) => {
       secondSmallest = arr[i];
     }
   }
-
-//   if (secondSmallest === Infinity) {
-//     throw new Error("There is no second smallest element in the array.");
-//   }
-
   return secondSmallest;
 }
-const numbers = [12, 5, 7, 3, 9, 2];
-console.log(findSecondSmallest(numbers)); 
+// const numbers = [12, 5, 7, 3, 9, 2];
+// console.log(findSecondSmallest(numbers)); 
 
