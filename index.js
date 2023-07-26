@@ -68,7 +68,7 @@ const  SimpleCalculator = (num1, operator, num2) =>  {
   const num1 = 5;
   const num2= 3;
   const operator = '+';
-  const result = SimpleCalculator(num1, operator, num2);
+  // const result = SimpleCalculator(num1, operator, num2);
   // console.log(result); 
   
 // //   Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
